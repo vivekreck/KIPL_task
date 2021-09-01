@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "fa608458-7579-47ac-bcee-52cf4c9468e5",
+		"name": "KIPLTask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "upload csvfile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/E:/csvFileExample.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/form/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"form",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read all data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/form?page=1&limit=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"form"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read data with id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/form/612f498219d580d7d78129c7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"form",
+						"612f498219d580d7d78129c7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update data with id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"johnson82\",\r\n    \"email\": \"craig@yourcompany.com\",\r\n    \"firstName\": \"john\",\r\n    \"lastName\": \"son\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/form/612f498219d580d7d78129c7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"form",
+						"612f498219d580d7d78129c7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete data with id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/form/612f498219d580d7d78129c9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"form",
+						"612f498219d580d7d78129c9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unknown api check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/xyz",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"xyz"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
